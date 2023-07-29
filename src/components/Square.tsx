@@ -14,7 +14,7 @@ const Square: React.FC<iSquareProps> = ({ onClick, value }) => {
   }
 
   return (
-    <button className="board-square" disabled>
+    <button className={`board-square border_${value}`} disabled>
       {value}
     </button>
   );
