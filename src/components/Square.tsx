@@ -3,11 +3,12 @@ import React from "react";
 interface iSquareProps {
   onClick: () => void;
   value: "X" | "O" | null;
+  winner: string | null;
 }
-const Square: React.FC<iSquareProps> = ({ onClick, value }) => {
+const Square: React.FC<iSquareProps> = ({ onClick, value, winner }) => {
   if (!value) {
     return (
-      <button className="board-square" onClick={onClick}>
+      <button className="board-square" onClick={onClick} disabled={Boolean(winner)}>
         {value}
       </button>
     );
