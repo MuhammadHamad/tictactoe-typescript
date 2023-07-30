@@ -14,9 +14,9 @@ const Board: React.FC = () => {
   useEffect(() => {
     const winnerPlayer = calculateWinner(squares);
     if (winnerPlayer) {
-      setWinner(`${winnerPlayer} is the winner`);
+      setWinner(`${winnerPlayer} is the winner. Please Reload to restart`);
     } else if(!winnerPlayer && !squares.filter(square => !square).length) {
-      setWinner("Its a Draw. Reload to restart.");
+      setWinner("Its a Draw.Please Reload to restart.");
     }
   });
 
